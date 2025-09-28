@@ -1,5 +1,5 @@
+//app/login/page.tsx
 'use client';
-
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { login } from '@/lib/auth';
@@ -19,6 +19,11 @@ export default function LoginPage() {
     setLoading(true);
     try {
       const user = await login(email, password);
+      console.log('Respuesta del backend:', user);
+
+      if (!user || !user.rut || !Array.isArray(user.carreras)) {
+        throw new Error('Respuesta inválida del servidor');
+      }
       setUser(user);
       router.replace('/dashboard');
     } catch (err: unknown) {

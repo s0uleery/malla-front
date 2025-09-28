@@ -1,5 +1,4 @@
 // src/lib/auth.ts
-// src/lib/auth.ts
 export type LoginResponse = {
   rut: string;
   carreras: {

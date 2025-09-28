@@ -1,3 +1,4 @@
+//app/dashboard/page.tsx
 'use client';
 import { useRouter } from 'next/navigation';
 import { getUser, clearUser } from '@/lib/session';
