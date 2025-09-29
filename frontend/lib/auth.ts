@@ -1,5 +1,6 @@
 // src/lib/auth.ts
 export type LoginResponse = {
+  nombre: string;
   rut: string;
   carreras: {
     codigo: string;
