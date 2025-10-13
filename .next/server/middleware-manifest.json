@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/Desktop_mallaproyectada_250a80d4._.js",
+        "server/edge/chunks/[root-of-the-server]__34909a82._.js",
+        "server/edge/chunks/turbopack-Desktop_mallaproyectada_edge-wrapper_72b25fbd.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dashboard(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/dashboard/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "ga8Q7JoMoJjut6jVL8g8Ns/171SDUbpBxCXjZKaUTaE=",
+        "__NEXT_PREVIEW_MODE_ID": "75be1cbfa6175e6393019122e7b5e225",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "07e479735536110763c44f5f4e80730667d2b2712051bcdd96ba48d518b0e420",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "d115aed94aee714b480a3b5aeb1491b6f17a0ff093e8b8e0ccda7c8ffaddd40a"
+      }
+    }
+  },
+  "sortedMiddleware": [
+    "/"
+  ],
+  "functions": {}
+}

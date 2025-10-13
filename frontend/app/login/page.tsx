@@ -43,7 +43,7 @@ export default function LoginPage() {
     </div>
       {/* Título */}
       <h1 className="text-2xl md:text-3xl font-bold text-[#E5E7EB] mb-8 text-center">
-        ¡Bienvenidx a tu proyección académica!
+        ¡Bienvenid@ a tu proyección académica!
       </h1>
 
       {/* Formulario */}

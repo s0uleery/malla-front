@@ -1,5 +1,7 @@
 //app/dashboard/page.tsx
 'use client';
+
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { getUser, clearUser } from '@/lib/session';
 
@@ -8,10 +10,27 @@ export default function DashboardPage() {
   const user = getUser();
 
   if (!user) return <p>No hay sesión activa</p>;
-  
+
+  function logout() {
+    clearUser();
+    router.replace('/login');
+  }
+
   return (
-    <div className="flex items-center justify-center h-full text-black-300">
-      <p className="text-sm">Selecciona una opción del menú lateral</p>
-    </div>
+    <main className="p-6">
+      <h1 className="text-2xl font-bold">Bienvenido, {user.rut}</h1>
+      <h2 className="mt-2">Carreras:</h2>
+      <ul>
+        {user.carreras.map((c) => (
+          <li key={c.codigo}>{c.nombre} ({c.catalogo})</li>
+        ))}
+      </ul>
+      <button
+        className="mt-6 rounded bg-red-600 px-3 py-1 text-white"
+        onClick={logout}
+      >
+        Cerrar sesión
+      </button>
+    </main>
   );
 }
